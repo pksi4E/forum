@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* for creating purposes, not be included in the build */
+* {
+  border: 1px red dotted;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: oldlace;
+  line-height: 1.25em;
+  /* min-height: 50vh; */
+  border: 1em blue solid;
+  margin: 2.5%;
+  padding: 2%;
+}
+
+img {
+  height: auto;
+  /* max-height: 100%; */
+}
+
+img.avatar-large {
+  border-radius: 25%;
+  width: 100px;
+  height: inherit;
+  rotate: -10deg;
+}

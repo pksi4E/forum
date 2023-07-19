@@ -1,0 +1,42 @@
+{
+  "categories": [
+    {
+      "id": "c1",
+      "name": "Chats",
+      "forums": ["f1"]
+    }
+  ],
+  "forums": [
+    {
+      "id": "f1",
+      "name": "fishing",
+      "description": "talk about fishing",
+      "categoryId": "c1",
+      "threads": ["t1"]
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "name": "Jan"
+    }
+  ],
+  "threads": [
+    {
+      "id": "t1",
+      "title": "What is your favourite food?",
+      "publishedAt": 141491349,
+      "posts": ["p1"],
+      "userId": "u1"
+    }
+  ],
+  "posts": [
+    {
+      "id": "p1",
+      "publishedAt": 381938193,
+      "userId": "u1",
+      "text": "I like fishes.",
+      "threadId": "t1"
+    }
+  ]
+}
