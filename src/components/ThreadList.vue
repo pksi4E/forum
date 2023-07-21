@@ -26,7 +26,7 @@ defineProps({
 <template>
   <div class="thread-list-container">
     <div class="thread-list">
-      <h2 class="list-title">Threads</h2>
+      <h2 class="thread-list-title">Threads</h2>
       <div
         v-for="thread in threads"
         :key="thread.id"
@@ -48,13 +48,15 @@ defineProps({
             {{ thread.publishedAt }}.
           </p>
         </div>
-        <div class="activity">
-          <p class="replies-count">
+        <div class="thread-replies-count">
+          <p class="thread-replies-count-text">
             {{ thread.posts.length - 1 }}
             {{ thread.posts.length - 1 === 1 ? 'odpowiedź' : 'odpowiedzi'}}
           </p>
+        </div>
+        <div class="thread-activity">
           <img class="avatar-large" :src="userById(thread.userId).avatar" alt="">
-          <div>
+          <div class="thread-activity-user">
             <p>
               <a href="#">{{ userById(thread.userId).name }}</a>
             </p>
@@ -71,5 +73,12 @@ defineProps({
   background-color: white;
   padding: 5%;
   border: 3px palevioletred solid;
+}
+.thread {
+  display: flex;
+}
+.thread-activity {
+  display: flex;
+  flex-direction: row;
 }
 </style>

@@ -36,12 +36,13 @@ export default {
 <template>
   <div class="thread-view" v-if="thread">
     <h1>{{ thread.title }}</h1>
-    <div
-      v-for="postId in thread.posts"
-      :key="postId"
-      class="posts-list"
-    >
-      <div class="post">
+
+    <div class="post-list">
+      <div
+        v-for="postId in thread.posts"
+        :key="postId"
+        class="post"
+      >
         <div class="user-info">
           <a href="#" class="user-name">
             {{ userById(postById(postId).userId).name }}
@@ -52,6 +53,9 @@ export default {
               class="avatar-large"
               alt="">
           </a>
+          <p class="">
+            51 postów
+          </p>
         </div>
         <div class="post-content">
           <p>
@@ -63,6 +67,7 @@ export default {
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -72,31 +77,52 @@ export default {
   padding: 5%;
   border: 3px palevioletred solid;
 }
-.posts-list {
-  padding: 5%;
-  background-color: lightgreen;
-  border: 5px green solid;
+
+.thread-view h1 {
+  color: blue;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  /* border: 2.5px green solid; */
   /* margin-top: 10%; */
 }
+
 .post {
-  width: 75%;
-  height: auto;
-  background-color: lightseagreen;
-  margin: 25px;
-  border: 2px black solid;
   display: flex;
+  width: 100%;
+  height: auto;
+  background-color: honeydew;
+  /* padding-top: 10px; */
+  margin-top: 20px;
+  border: 1.5px rgb(11, 123, 24) solid;
   border-radius: 1.5em;
+  box-shadow: 7px 7px 10px rgb(168, 242, 195);
+  /* flex-wrap: wrap; */
 }
 
 .post .user-info {
-  display: inherit;
+  /* display: inherit; */
   flex-direction: column;
+  /* flex-basis: 100%; */
 }
 
 .post .post-content {
-  display: inherit;
+  /* display: inherit; */
   text-align: left;
   padding-left: 5%;
   font-size: 18px;
+}
+
+.post .post-date {
+  flex-basis: 80%;
+  justify-content: center;
+  text-align: right;
 }
 </style>
