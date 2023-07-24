@@ -42,7 +42,7 @@ defineProps({
           </p>
           <p class="thread-content-user">
             Utworzył
-            <router-link :to="{ name: home }">
+            <router-link :to="{ name: 'home' }">
               {{ userById(thread.userId).name }}
             </router-link>,
             {{ thread.publishedAt }}.

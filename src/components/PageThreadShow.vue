@@ -34,7 +34,7 @@ export default {
 </script>
 
 <template>
-  <div class="thread-view" v-if="thread">
+  <div v-if="thread" class="thread-view">
     <h1>{{ thread.title }}</h1>
 
     <div class="post-list">
