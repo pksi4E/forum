@@ -6,12 +6,18 @@ const routes = [
     path: '/',
     name: 'home',
     component: PageHome,
+    alias: '/home'
   },
   {
     path: '/thread/:id',
     name: 'thread-show',
     component: () => import('@/components/PageThreadShow.vue'),
     props: true,
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: () => import('@/components/PageNotFound.vue'),
   }
 ]
 

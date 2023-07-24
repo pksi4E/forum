@@ -74,8 +74,16 @@ defineProps({
   padding: 5%;
   border: 3px palevioletred solid;
 }
+.thread-list-title {
+  background-color: sandybrown;
+  padding: .5em;
+}
 .thread {
   display: flex;
+  justify-content: space-between;
+}
+.thread-content-title {
+  text-align: left;
 }
 .thread-activity {
   display: flex;
