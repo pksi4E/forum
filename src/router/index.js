@@ -1,4 +1,4 @@
-import PageHome from '@/components/PageHome'
+import PageHome from '@/pages/PageHome'
 import * as VueRouter from 'vue-router'
 import sourceData from '@/data.json'
 
@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/thread/:id',
     name: 'thread-show',
-    component: () => import('@/components/PageThreadShow.vue'),
+    component: () => import('@/pages/PageThreadShow.vue'),
     props: true,
     beforeEnter: (to) => {
       // checking if the thread exists else redirect to not-found page
@@ -30,7 +30,7 @@ const routes = [
   {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
-    component: () => import('@/components/PageNotFound.vue'),
+    component: () => import('@/pages/PageNotFound.vue'),
   }
 ]
 

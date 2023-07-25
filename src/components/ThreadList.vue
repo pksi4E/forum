@@ -27,6 +27,13 @@ defineProps({
   <div class="thread-list-container">
     <div class="thread-list">
       <h2 class="thread-list-title">Threads</h2>
+      <!-- <div class="threads-list-info">
+        <ul>
+          <li>Tytuł</li>
+          <li>Odpowiedzi</li>
+          <li>Ostatni komentarz</li>
+        </ul>
+      </div> -->
       <div
         v-for="thread in threads"
         :key="thread.id"
