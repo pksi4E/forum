@@ -5,7 +5,7 @@ export default {
   name: 'PostListElement',
   props: {
     post: {
-      type: Array,
+      type: Object,
       required: true
     }
   },
@@ -56,7 +56,7 @@ export default {
 <style scoped>
 
 .post-user-info {
-  /* display: inherit; */
+  display: flex;
   flex-direction: column;
   /* flex-basis: 100%; */
 }

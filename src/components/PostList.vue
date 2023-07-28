@@ -6,7 +6,7 @@ export default {
   components: { PostListElement },
   props: {
     posts: {
-      type: Array,
+      type: Object,
       required: true
     }
   }
@@ -42,14 +42,15 @@ export default {
 
 .post {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   height: auto;
   background-color: honeydew;
   /* padding-top: 10px; */
   margin-top: 20px;
   border: 1.5px rgb(11, 123, 24) solid;
-  border-radius: 1.5em;
-  box-shadow: 7px 7px 10px rgb(168, 242, 195);
-  /* flex-wrap: wrap; */
+  border-radius: 1.25em;
+  box-shadow: 7px 7px 10px rgb(171, 185, 177);
 }
 </style>
