@@ -52,7 +52,7 @@ defineProps({
             <router-link :to="{ name: 'home' }">
               {{ userById(thread.userId).name }}
             </router-link>,
-            {{ thread.publishedAt }}.
+            <app-date :timestamp="thread.publishedAt"/>.
           </p>
         </div>
         <div class="thread-replies-count">
@@ -67,7 +67,9 @@ defineProps({
             <p>
               <a href="#">{{ userById(thread.userId).name }}</a>
             </p>
-            <p>{{ thread.publishedAt }}</p>
+            <p>
+              <app-date :timestamp="thread.publishedAt"/>
+            </p>
           </div>
         </div>
       </div>

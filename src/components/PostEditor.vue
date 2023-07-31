@@ -30,7 +30,7 @@ export default {
         <div class="add-post-text">
           <textarea
             v-model="postText"
-            name="" id="" cols="30" rows="10" class=""></textarea>
+            name="text" id="" cols="30" rows="10" class=""></textarea>
         </div>
         <div class="add-post-submit">
           <button>Submit post</button>
