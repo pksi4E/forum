@@ -1,5 +1,10 @@
 <script>
 import sourceData from '@/data.json'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+import localizedFormat from 'dayjs/plugin/localizedFormat'
+dayjs.extend(relativeTime)
+dayjs.extend(localizedFormat)
 
 export default {
   name: 'PostListElement',
@@ -17,6 +22,12 @@ export default {
   methods: {
     userById (id) {
       return this.users.find(u => u.id === id)
+    },
+    diffForHumans (timestamp) {
+      return dayjs.unix(timestamp).fromNow()
+    },
+    humanFriendlyDate (timestamp) {
+      return dayjs.unix(timestamp).format('lll')
     }
   }
 }
@@ -47,8 +58,8 @@ export default {
     </p>
   </div>
       
-  <div class="post-date">
-    {{ post.publishedAt }}
+  <div class="post-date" :title="humanFriendlyDate(post.publishedAt)">
+    {{ diffForHumans(post.publishedAt) }}
   </div>
 
 </template>
