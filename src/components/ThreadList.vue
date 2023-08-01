@@ -90,6 +90,10 @@ defineProps({
 .thread {
   display: flex;
   justify-content: space-between;
+  background-color: blanchedalmond;
+}
+.thread:nth-child(odd) {
+  background-color: goldenrod;
 }
 .thread-content-title {
   text-align: left;

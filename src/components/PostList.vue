@@ -1,9 +1,9 @@
 <script>
-import PostListElement from '@/components/PostListElement.vue'
+import PostListItem from '@/components/PostListItem.vue'
 
 export default {
   name: 'PostList',
-  components: { PostListElement },
+  components: { PostListItem },
   props: {
     posts: {
       type: Object,
@@ -21,7 +21,7 @@ export default {
       :key="post.id"
       class="post"
     >
-      <post-list-element :post="post"/>
+      <post-list-item :post="post"/>
     </div>
   </div>
   

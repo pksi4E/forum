@@ -1,13 +1,13 @@
 <script>
 import sourceData from '@/data.json'
-import ForumList from '@/components/ForumList.vue'
+import CategoryList from '@/components/CategoryList.vue'
 export default {
   components: {
-    ForumList
+    CategoryList
   },
   data () {
     return {
-      forums: sourceData.forums,
+      categories: sourceData.categories,
     }
   }
 }
@@ -15,7 +15,9 @@ export default {
 
 <template>
   <h1>Forum</h1>
-  <forum-list :forums="forums" />
+  <div v-for="category in categories" :key="category.id">
+    <category-list :id="category.id"/>
+  </div>
 </template>
 
 <style scoped>

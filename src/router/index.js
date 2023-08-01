@@ -10,6 +10,12 @@ const routes = [
     alias: '/home'
   },
   {
+    path: '/categories/:id',
+    name: 'categories',
+    component: () => import('@/pages/PageCategory.vue'),
+    props: true
+  },
+  {
     path: '/forum/:id',
     name: 'forum',
     component: () => import('@/pages/PageForum.vue'),

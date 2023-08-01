@@ -2,7 +2,7 @@
 import sourceData from '@/data.json'
 
 export default {
-  name: 'PostListElement',
+  name: 'PostListItem',
   props: {
     post: {
       type: Object,
