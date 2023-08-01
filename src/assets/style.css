@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 /* for creating purposes, not be included in the build */
-* {
-  /* border: 1px red dotted; */
-}
+/* * {
+  border: 1px red dotted;
+} */
 
 html {
   box-sizing: border-box;
