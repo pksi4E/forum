@@ -81,7 +81,7 @@ defineProps({
 .thread-list {
   background-color: white;
   padding: 5%;
-  border: 3px palevioletred solid;
+  /* border: 3px palevioletred solid; */
 }
 .thread-list-title {
   background-color: sandybrown;

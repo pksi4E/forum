@@ -2,7 +2,7 @@
 
 /* for creating purposes, not be included in the build */
 * {
-  border: 1px red dotted;
+  /* border: 1px red dotted; */
 }
 
 html {
@@ -21,7 +21,7 @@ body {
   background-color: oldlace;
   line-height: 1.25em;
   /* min-height: 50vh; */
-  border: 1em blue solid;
+  /* border: 1em blue solid; */
   margin: 0;
   /* margin: 2.5%; */
   padding: 2%;
